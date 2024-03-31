@@ -1,5 +1,5 @@
 export * from "./Home"
 export * from "./About"
 export * from "./Contact"
-export * from "./Service"
+export * from "./UserIncentives"
 
