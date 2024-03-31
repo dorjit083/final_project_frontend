@@ -23,10 +23,9 @@ function StudentPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('students/add', formData); // Added http:// in the URL
+            const response = await axios.post('students/add', formData); 
             console.log(response);
             alert('Activity submitted successfully!');
-            // Optionally, reset the form after successful submission
             setFormData({
                 name: '',
                 activityId: 0,
@@ -40,6 +39,7 @@ function StudentPage() {
             alert('Failed to submit activity');
         }
     };
+
 
     return (
         <div className="container">
@@ -70,6 +70,7 @@ function StudentPage() {
                     <textarea id="comments" name="comments" value={formData.comments} onChange={handleChange}></textarea>
                 </div>
                 <button onClick={handleSubmit} type="submit">Submit</button>
+                <button>New Page</button>
             </form>
         </div>
     );
