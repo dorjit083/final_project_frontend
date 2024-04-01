@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../CSSFolder/AddStudentPage.css';
+// import '../CSSFolder/AddStudentPage.css';
 
-function StudentPage() {
+export function StudentPage() {
     const [formData, setFormData] = useState({
         name: '',
         activityId: 0,
@@ -76,4 +76,3 @@ function StudentPage() {
     );
 }
 
-export default StudentPage;
