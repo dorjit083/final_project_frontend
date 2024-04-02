@@ -14,7 +14,6 @@ export const RegistrationPage = () => {
 
   const handleRegistration = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch('/password/addPassword', { // Replace with your actual backend URL for registration
         method: 'POST',
@@ -45,35 +44,9 @@ export const RegistrationPage = () => {
     }
   };
 
-  
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/password/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      const data = await response.text();
-
-      if (response.ok) {
-        console.log('Login successful');
-        alert(data);
-
-        navigate("/StudentPage")
-
-      } else {
-        alert("Login Failed!")
-        setError("Invalid username or password");
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+  // const handleLogin_page=()=>{
+  //   navigate("/Login_Page");
+  // }
   return (
     <div className='div_registration'>
       <h2 className='registration_h2'>Register</h2>
@@ -98,34 +71,7 @@ export const RegistrationPage = () => {
         <button type="submit">Register</button>
       </form>
 
-
-      <div style={{height:"40px", marginTop:"20px"}}>
-----------------------------------------------
-      </div>
-
-
-      <h2 className='registration_h2'>Login</h2>
-      <form className='form_login' >
-        <div className='form_div_username'>
-          <label className='username_login'>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div className='form_div_password'>
-          <label className='password_login'>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" onClick={handleLogin}>Login</button>
-      </form>
+      <button style={{color:'blueviolet', marginTop:'60px'}} onClick={() => navigate('/LoginPage')}>Login</button>
     </div>
-    
-    
   );
 };

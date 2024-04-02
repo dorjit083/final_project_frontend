@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavBar } from './components/NavBar';
 import { Route, Routes } from 'react-router-dom';
-import { About, Contact, Home, UserIncentives, RegistrationPage/*, Login_Page*/, StudentPage} from './components/pages';
+import { About, Contact, Home, UserIncentives, RegistrationPage, LoginPage, StudentPage} from './components/pages';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/UserIncentives" element={<UserIncentives />} />
         <Route path="/RegistrationPage" element={<RegistrationPage/>}/>
-        {/* <Route path="/Login_Page" element={<Login_Page/>}/> */}
+        <Route path="/LoginPage" element={<LoginPage/>}/>
         <Route path="/StudentPage" element={<StudentPage/>}/>
       </Routes>
     </div>
