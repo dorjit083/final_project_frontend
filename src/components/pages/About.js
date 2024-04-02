@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css"; // You can create a separate CSS file for styling if needed
+import "./About.css";
 
 export const About = () => {
     return (
@@ -27,7 +27,7 @@ export const About = () => {
                     <section className="team-section">
                         <h2>Our Team</h2>
                         <div className="team-members">
-                            {/* List your team members here */}
+
                             <div className="team-member">
                                 <h3>Tshering Dorji</h3>
                                 <p>Role: CEO</p>
@@ -36,7 +36,6 @@ export const About = () => {
                                 <h3>Dorji Tshering</h3>
                                 <p>Role: CTO</p>
                             </div>
-                            {/* Add more team members as needed */}
                         </div>
                     </section>
 

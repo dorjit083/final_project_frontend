@@ -7,7 +7,6 @@ import { About, Contact, Home, UserIncentives, RegistrationPage, LoginPage, Stud
 
 function App() {
   return (
-    //can have different component outside of the routers
     <div className="App">
       <NavBar />
       <Routes> 

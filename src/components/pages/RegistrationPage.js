@@ -15,27 +15,20 @@ export const RegistrationPage = () => {
   const handleRegistration = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/password/addPassword', { // Replace with your actual backend URL for registration
+      const response = await fetch('/password/addPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }), // Assuming you send username and password for registration
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        // Registration successful, redirect or display success message
         console.log('Registration successful');
         alert("Registration Successful");
-
-        //******************
-        // navigate("/Login_Page");
-        //******************
-
       } else {
-        // Registration failed, display error message
         alert("Registration Failed!")
         setError(data.message);
       }
@@ -44,9 +37,6 @@ export const RegistrationPage = () => {
     }
   };
 
-  // const handleLogin_page=()=>{
-  //   navigate("/Login_Page");
-  // }
   return (
     <div className='div_registration'>
       <h2 className='registration_h2'>Register</h2>
@@ -71,7 +61,7 @@ export const RegistrationPage = () => {
         <button type="submit">Register</button>
       </form>
 
-      <button style={{color:'blueviolet', marginTop:'60px'}} onClick={() => navigate('/LoginPage')}>Login</button>
+      <button style={{ color: 'blueviolet', marginTop: '60px' }} onClick={() => navigate('/LoginPage')}>Login</button>
     </div>
   );
 };

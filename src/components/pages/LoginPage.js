@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importing useNavigate
+import { useNavigate } from 'react-router-dom';
 import "./LoginPage.css";
 
 export const LoginPage = () => {
-  const [username, setUsername] = useState(''); // Define username state
-  const [password, setPassword] = useState(''); // Define password state
-  const [error, setError] = useState(''); // Define error state
-  const navigate = useNavigate(); // Assigning useNavigate to navigate
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -38,7 +38,7 @@ export const LoginPage = () => {
   };
   return (
     <div className='div_login'>
-    
+
       <h2 className='login_h2'>Login</h2>
       <form className='form_login' onSubmit={handleLogin}>
         <div className='form_div_username'>
@@ -60,7 +60,7 @@ export const LoginPage = () => {
         <button type="submit">Login</button>
       </form>
       <div></div>
-      <button style={{color:'blueviolet', marginTop:'60px'}} onClick={() => navigate('/RegistrationPage')}>Register</button>
+      <button style={{ color: 'blueviolet', marginTop: '60px' }} onClick={() => navigate('/RegistrationPage')}>Register</button>
     </div>
   );
 };

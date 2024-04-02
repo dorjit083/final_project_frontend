@@ -10,6 +10,7 @@ export function StudentPage() {
         activityId: 0,
         startingDate: '',
         endingDate: '',
+        duration: '',
         status: '',
         comments: ''
     });
@@ -37,6 +38,7 @@ export function StudentPage() {
                 activityId: 0,
                 startingDate: '',
                 endingDate: '',
+                duration: '',
                 status: '',
                 comments: ''
             });
@@ -108,6 +110,15 @@ export function StudentPage() {
                         onChange={(e) => setFormData({ ...formData, endingDate: e.target.value })} />
                 </div>
                 <div className="form-group">
+                    <label className='addStudent_label' htmlFor="duration">Duration (in Months):</label>
+                    <input className='addStudent_input'
+                        type="number"
+                        id="duration"
+                        name="duration"
+                        value={formData.duration}
+                        onChange={(e) => setFormData({ ...formData, duration: e.target.value })} />
+                </div>
+                <div className="form-group">
                     <label className='addStudent_label_status' htmlFor="status">Status:</label>
                     <input className='addStudent_input_status'
                         type="text"
@@ -135,6 +146,7 @@ export function StudentPage() {
                         <th>Activity ID</th>
                         <th>Starting Date</th>
                         <th>Ending Date</th>
+                        <th>Duration</th>
                         <th>Status</th>
                         <th>Comments</th>
                         <th>Actions</th>
@@ -147,11 +159,11 @@ export function StudentPage() {
                             <td>{student.activityId}</td>
                             <td>{student.startingDate}</td>
                             <td>{student.endingDate}</td>
+                            <td>{student.duration}</td>
                             <td>{student.status}</td>
                             <td>{student.comments}</td>
                             <td>
                                 <button onClick={() => handleDelete(student.id)}>Delete</button>
-                                {/* Add update button with appropriate onClick handler */}
                             </td>
                         </tr>
                     ))}

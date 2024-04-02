@@ -7,10 +7,6 @@ export const NavBar = () => {
         <nav>
             <Link to="/" className="title">Home</Link>
             <div className="menu">
-<span></span>
-<span></span>
-<span></span>
-
             </div>
             <ul>
                 <li>

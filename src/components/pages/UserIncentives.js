@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserIncentives.css"; // You can create a separate CSS file for styling if needed
+import "./UserIncentives.css";
 
 export const UserIncentives = () => {
   return (
